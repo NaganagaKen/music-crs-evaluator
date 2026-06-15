@@ -1,0 +1,177 @@
+{
+  "recall@20": 0.09437499999999999,
+  "recall@50": 0.1395,
+  "recall@100": 0.181375,
+  "recall@200": 0.231875,
+  "recall@500": 0.309125,
+  "micro": {
+    "recall@20": 0.094375,
+    "recall@50": 0.1395,
+    "recall@100": 0.181375,
+    "recall@200": 0.231875,
+    "recall@500": 0.309125
+  },
+  "turn_wise": {
+    "1": {
+      "recall@20": 0.0,
+      "recall@50": 0.0,
+      "recall@100": 0.0,
+      "recall@200": 0.0,
+      "recall@500": 0.0,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 0,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "no_history": 1000
+      }
+    },
+    "2": {
+      "recall@20": 0.113,
+      "recall@50": 0.176,
+      "recall@100": 0.214,
+      "recall@200": 0.262,
+      "recall@500": 0.339,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "3": {
+      "recall@20": 0.108,
+      "recall@50": 0.156,
+      "recall@100": 0.216,
+      "recall@200": 0.282,
+      "recall@500": 0.371,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "4": {
+      "recall@20": 0.125,
+      "recall@50": 0.172,
+      "recall@100": 0.222,
+      "recall@200": 0.274,
+      "recall@500": 0.354,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "5": {
+      "recall@20": 0.114,
+      "recall@50": 0.158,
+      "recall@100": 0.198,
+      "recall@200": 0.253,
+      "recall@500": 0.345,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "6": {
+      "recall@20": 0.106,
+      "recall@50": 0.161,
+      "recall@100": 0.206,
+      "recall@200": 0.268,
+      "recall@500": 0.383,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "7": {
+      "recall@20": 0.096,
+      "recall@50": 0.144,
+      "recall@100": 0.201,
+      "recall@200": 0.257,
+      "recall@500": 0.334,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "8": {
+      "recall@20": 0.093,
+      "recall@50": 0.149,
+      "recall@100": 0.194,
+      "recall@200": 0.259,
+      "recall@500": 0.347,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    }
+  },
+  "metadata": {
+    "tid": "exp009_metadata_nmf_history_top500",
+    "eval_dataset": "devset",
+    "track_metadata_dataset_name": "talkpl-ai/TalkPlayData-Challenge-Track-Metadata",
+    "track_metadata_split": "all_tracks",
+    "track_metadata_arrow_path": "C:\\Users\\ken05\\.cache\\huggingface\\datasets\\talkpl-ai___talk_play_data-challenge-track-metadata\\default\\0.0.0\\91ddb944e1b0f5d13f18a2672214f69022c09d10\\talk_play_data-challenge-track-metadata-all_tracks.arrow",
+    "ground_truth_path": "exp/ground_truth/devset.json",
+    "model_path": "exp/models/exp009/metadata_nmf.pkl",
+    "model": "count_vectorizer_nmf",
+    "metadata_fields": [
+      "track_name",
+      "artist_name",
+      "album_name",
+      "tag_list",
+      "release_date"
+    ],
+    "user_vector": "mean_of_prior_turn_item_nmf_vectors",
+    "retrieval_metric": "cosine_similarity",
+    "exclude_history_items": true,
+    "empty_history_strategy": "empty_predictions",
+    "top_k": 500,
+    "k_values": [
+      20,
+      50,
+      100,
+      200,
+      500
+    ],
+    "n_components": 128,
+    "max_features": 50000,
+    "min_df": 2,
+    "max_df": 0.95,
+    "init": "nndsvda",
+    "solver": "cd",
+    "beta_loss": "frobenius",
+    "max_iter": 200,
+    "tol": 0.0001,
+    "alpha_W": 0.0,
+    "alpha_H": 0.0,
+    "l1_ratio": 0.0,
+    "seed": 42,
+    "retrieval_batch_size": 64,
+    "candidate_track_count": 47071,
+    "vocabulary_size": 43104,
+    "empty_item_document_count": 0,
+    "reconstruction_error": 2322.72562297442,
+    "nmf_n_iter": 107,
+    "eval_turn_count": 8000,
+    "eval_session_count": 1000,
+    "eval_user_count": 500,
+    "target_in_catalog_count": 8000,
+    "target_in_catalog_rate": 1.0,
+    "retrieval_status_counts": {
+      "no_history": 1000,
+      "ok": 7000
+    }
+  }
+}
