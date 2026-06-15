@@ -1,0 +1,170 @@
+{
+  "recall@20": 0.09949999999999999,
+  "recall@50": 0.150625,
+  "recall@100": 0.196,
+  "recall@200": 0.24862499999999998,
+  "recall@500": 0.34075,
+  "micro": {
+    "recall@20": 0.0995,
+    "recall@50": 0.150625,
+    "recall@100": 0.196,
+    "recall@200": 0.248625,
+    "recall@500": 0.34075
+  },
+  "turn_wise": {
+    "1": {
+      "recall@20": 0.0,
+      "recall@50": 0.0,
+      "recall@100": 0.0,
+      "recall@200": 0.0,
+      "recall@500": 0.0,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 0,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "no_history": 1000
+      }
+    },
+    "2": {
+      "recall@20": 0.136,
+      "recall@50": 0.195,
+      "recall@100": 0.256,
+      "recall@200": 0.305,
+      "recall@500": 0.406,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "3": {
+      "recall@20": 0.128,
+      "recall@50": 0.186,
+      "recall@100": 0.236,
+      "recall@200": 0.302,
+      "recall@500": 0.403,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "4": {
+      "recall@20": 0.111,
+      "recall@50": 0.175,
+      "recall@100": 0.225,
+      "recall@200": 0.285,
+      "recall@500": 0.385,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "5": {
+      "recall@20": 0.103,
+      "recall@50": 0.16,
+      "recall@100": 0.222,
+      "recall@200": 0.28,
+      "recall@500": 0.395,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "6": {
+      "recall@20": 0.112,
+      "recall@50": 0.168,
+      "recall@100": 0.218,
+      "recall@200": 0.287,
+      "recall@500": 0.396,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "7": {
+      "recall@20": 0.109,
+      "recall@50": 0.168,
+      "recall@100": 0.215,
+      "recall@200": 0.28,
+      "recall@500": 0.388,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "8": {
+      "recall@20": 0.097,
+      "recall@50": 0.153,
+      "recall@100": 0.196,
+      "recall@200": 0.25,
+      "recall@500": 0.353,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    }
+  },
+  "metadata": {
+    "tid": "exp006_metadata_lda_history_top500",
+    "eval_dataset": "devset",
+    "track_metadata_dataset_name": "talkpl-ai/TalkPlayData-Challenge-Track-Metadata",
+    "track_metadata_split": "all_tracks",
+    "track_metadata_arrow_path": "C:\\Users\\ken05\\.cache\\huggingface\\datasets\\talkpl-ai___talk_play_data-challenge-track-metadata\\default\\0.0.0\\91ddb944e1b0f5d13f18a2672214f69022c09d10\\talk_play_data-challenge-track-metadata-all_tracks.arrow",
+    "ground_truth_path": "exp/ground_truth/devset.json",
+    "model_path": "exp/models/exp006/metadata_lda.pkl",
+    "model": "count_vectorizer_latent_dirichlet_allocation",
+    "metadata_fields": [
+      "track_name",
+      "artist_name",
+      "album_name",
+      "tag_list",
+      "release_date"
+    ],
+    "user_vector": "mean_of_prior_turn_item_topic_vectors",
+    "retrieval_metric": "cosine_similarity",
+    "exclude_history_items": true,
+    "empty_history_strategy": "empty_predictions",
+    "top_k": 500,
+    "k_values": [
+      20,
+      50,
+      100,
+      200,
+      500
+    ],
+    "n_components": 128,
+    "max_features": 50000,
+    "min_df": 2,
+    "max_df": 0.95,
+    "max_iter": 10,
+    "learning_method": "online",
+    "lda_batch_size": 1024,
+    "retrieval_batch_size": 64,
+    "seed": 42,
+    "candidate_track_count": 47071,
+    "vocabulary_size": 43104,
+    "empty_item_document_count": 0,
+    "eval_turn_count": 8000,
+    "eval_session_count": 1000,
+    "eval_user_count": 500,
+    "target_in_catalog_count": 8000,
+    "target_in_catalog_rate": 1.0,
+    "retrieval_status_counts": {
+      "no_history": 1000,
+      "ok": 7000
+    }
+  }
+}

@@ -5,3 +5,4 @@ scipy
 google-genai
 scikit-learn
 lightgbm
+gensim>=4.3

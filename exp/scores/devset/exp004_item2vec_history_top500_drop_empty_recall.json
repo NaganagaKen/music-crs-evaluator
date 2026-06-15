@@ -1,0 +1,88 @@
+{
+  "recall@20": 0.10079076775617622,
+  "recall@50": 0.15169774305672182,
+  "recall@100": 0.1890500886011888,
+  "recall@200": 0.22011691460609867,
+  "recall@500": 0.2703745329375951,
+  "micro": {
+    "recall@20": 0.09842061512884455,
+    "recall@50": 0.14779717373233583,
+    "recall@100": 0.18487115544472152,
+    "recall@200": 0.21579384871155444,
+    "recall@500": 0.2660016625103907
+  },
+  "turn_wise": {
+    "2": {
+      "recall@20": 0.15328467153284672,
+      "recall@50": 0.23941605839416058,
+      "recall@100": 0.2759124087591241,
+      "recall@200": 0.30364963503649633,
+      "recall@500": 0.3532846715328467
+    },
+    "3": {
+      "recall@20": 0.10858585858585859,
+      "recall@50": 0.16666666666666666,
+      "recall@100": 0.2159090909090909,
+      "recall@200": 0.25757575757575757,
+      "recall@500": 0.31186868686868685
+    },
+    "4": {
+      "recall@20": 0.10904872389791183,
+      "recall@50": 0.15893271461716937,
+      "recall@100": 0.20069605568445475,
+      "recall@200": 0.23317865429234338,
+      "recall@500": 0.2877030162412993
+    },
+    "5": {
+      "recall@20": 0.09151785714285714,
+      "recall@50": 0.13169642857142858,
+      "recall@100": 0.16629464285714285,
+      "recall@200": 0.20424107142857142,
+      "recall@500": 0.24888392857142858
+    },
+    "6": {
+      "recall@20": 0.09200438116100766,
+      "recall@50": 0.13910186199342825,
+      "recall@100": 0.171960569550931,
+      "recall@200": 0.19605695509309967,
+      "recall@500": 0.23986856516976998
+    },
+    "7": {
+      "recall@20": 0.07974137931034483,
+      "recall@50": 0.11637931034482758,
+      "recall@100": 0.15732758620689655,
+      "recall@200": 0.18211206896551724,
+      "recall@500": 0.2273706896551724
+    },
+    "8": {
+      "recall@20": 0.07135250266240682,
+      "recall@50": 0.10969116080937168,
+      "recall@100": 0.13525026624068157,
+      "recall@200": 0.16400425985090522,
+      "recall@500": 0.22364217252396165
+    }
+  },
+  "metadata": {
+    "total_ground_truth_turn_count": 8000,
+    "evaluated_turn_count": 6015,
+    "dropped_empty_prediction_turn_count": 1985,
+    "missing_prediction_turn_count": 0,
+    "total_ground_truth_user_count": 500,
+    "evaluated_user_count": 482,
+    "dropped_user_count": 18,
+    "drop_empty_predictions": true,
+    "input_tid": "exp004_item2vec_history_top500",
+    "output_tid": "exp004_item2vec_history_top500_drop_empty",
+    "eval_dataset": "devset",
+    "ground_truth_path": "exp\\ground_truth\\devset.json",
+    "retrieval_path": "exp\\retrieval\\devset\\exp004_item2vec_history_top500.json",
+    "k_values": [
+      20,
+      50,
+      100,
+      200,
+      500
+    ],
+    "input_prediction_count": 8000
+  }
+}

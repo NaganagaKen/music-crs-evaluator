@@ -4,4 +4,5 @@ __pycache__/
 *.egg-info/
 uv.lock
 .claude
-exp/scores
+exp/models
+exp/retrieval

@@ -1,0 +1,171 @@
+{
+  "recall@20": 0.07400000000000001,
+  "recall@50": 0.111125,
+  "recall@100": 0.139,
+  "recall@200": 0.16225,
+  "recall@500": 0.2,
+  "micro": {
+    "recall@20": 0.074,
+    "recall@50": 0.111125,
+    "recall@100": 0.139,
+    "recall@200": 0.16225,
+    "recall@500": 0.2
+  },
+  "turn_wise": {
+    "1": {
+      "recall@20": 0.0,
+      "recall@50": 0.0,
+      "recall@100": 0.0,
+      "recall@200": 0.0,
+      "recall@500": 0.0,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 0,
+      "target_in_item2vec_vocab_count": 685,
+      "retrieval_status_counts": {
+        "no_history": 1000
+      }
+    },
+    "2": {
+      "recall@20": 0.105,
+      "recall@50": 0.164,
+      "recall@100": 0.189,
+      "recall@200": 0.208,
+      "recall@500": 0.242,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 685,
+      "target_in_item2vec_vocab_count": 648,
+      "retrieval_status_counts": {
+        "ok": 685,
+        "all_history_oov": 315
+      }
+    },
+    "3": {
+      "recall@20": 0.086,
+      "recall@50": 0.132,
+      "recall@100": 0.171,
+      "recall@200": 0.204,
+      "recall@500": 0.247,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 792,
+      "target_in_item2vec_vocab_count": 648,
+      "retrieval_status_counts": {
+        "ok": 792,
+        "all_history_oov": 208
+      }
+    },
+    "4": {
+      "recall@20": 0.094,
+      "recall@50": 0.137,
+      "recall@100": 0.173,
+      "recall@200": 0.201,
+      "recall@500": 0.248,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 862,
+      "target_in_item2vec_vocab_count": 631,
+      "retrieval_status_counts": {
+        "ok": 862,
+        "all_history_oov": 138
+      }
+    },
+    "5": {
+      "recall@20": 0.082,
+      "recall@50": 0.118,
+      "recall@100": 0.149,
+      "recall@200": 0.183,
+      "recall@500": 0.223,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 896,
+      "target_in_item2vec_vocab_count": 568,
+      "retrieval_status_counts": {
+        "ok": 896,
+        "all_history_oov": 104
+      }
+    },
+    "6": {
+      "recall@20": 0.084,
+      "recall@50": 0.127,
+      "recall@100": 0.157,
+      "recall@200": 0.179,
+      "recall@500": 0.219,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 913,
+      "target_in_item2vec_vocab_count": 557,
+      "retrieval_status_counts": {
+        "ok": 913,
+        "all_history_oov": 87
+      }
+    },
+    "7": {
+      "recall@20": 0.074,
+      "recall@50": 0.108,
+      "recall@100": 0.146,
+      "recall@200": 0.169,
+      "recall@500": 0.211,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 928,
+      "target_in_item2vec_vocab_count": 560,
+      "retrieval_status_counts": {
+        "ok": 928,
+        "all_history_oov": 72
+      }
+    },
+    "8": {
+      "recall@20": 0.067,
+      "recall@50": 0.103,
+      "recall@100": 0.127,
+      "recall@200": 0.154,
+      "recall@500": 0.21,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 939,
+      "target_in_item2vec_vocab_count": 551,
+      "retrieval_status_counts": {
+        "ok": 939,
+        "all_history_oov": 61
+      }
+    }
+  },
+  "metadata": {
+    "tid": "exp004_item2vec_history_top500",
+    "eval_dataset": "devset",
+    "dataset_name": "talkpl-ai/TalkPlayData-Challenge-Dataset",
+    "train_split": "train",
+    "train_arrow_path": "C:\\Users\\ken05\\.cache\\huggingface\\datasets\\talkpl-ai___talk_play_data-challenge-dataset\\default\\0.0.0\\8110a2cfda8f7cfd43805a09eca6c58e0f7b285c\\talk_play_data-challenge-dataset-train.arrow",
+    "ground_truth_path": "exp/ground_truth/devset.json",
+    "model_path": "exp/models/exp004/item2vec.model",
+    "model": "word2vec_skipgram",
+    "user_vector": "mean_of_prior_turn_item_vectors",
+    "retrieval_metric": "cosine_similarity",
+    "exclude_history_items": true,
+    "empty_history_strategy": "empty_predictions",
+    "top_k": 500,
+    "k_values": [
+      20,
+      50,
+      100,
+      200,
+      500
+    ],
+    "vector_size": 128,
+    "window": 7,
+    "min_count": 1,
+    "negative": 10,
+    "epochs": 20,
+    "batch_size": 64,
+    "workers": 1,
+    "seed": 42,
+    "training_session_count": 15199,
+    "training_interaction_count": 121592,
+    "training_unique_track_count": 43597,
+    "item2vec_vocab_size": 43597,
+    "eval_turn_count": 8000,
+    "eval_session_count": 1000,
+    "eval_user_count": 500,
+    "target_in_item2vec_vocab_count": 4848,
+    "target_in_item2vec_vocab_rate": 0.606,
+    "retrieval_status_counts": {
+      "no_history": 1000,
+      "all_history_oov": 985,
+      "ok": 6015
+    }
+  }
+}

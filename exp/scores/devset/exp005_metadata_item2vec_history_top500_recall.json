@@ -1,0 +1,179 @@
+{
+  "recall@20": 0.124875,
+  "recall@50": 0.19275,
+  "recall@100": 0.252875,
+  "recall@200": 0.31074999999999997,
+  "recall@500": 0.40625,
+  "micro": {
+    "recall@20": 0.124875,
+    "recall@50": 0.19275,
+    "recall@100": 0.252875,
+    "recall@200": 0.31075,
+    "recall@500": 0.40625
+  },
+  "turn_wise": {
+    "1": {
+      "recall@20": 0.0,
+      "recall@50": 0.0,
+      "recall@100": 0.0,
+      "recall@200": 0.0,
+      "recall@500": 0.0,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 0,
+      "target_in_item2vec_vocab_count": 1000,
+      "retrieval_status_counts": {
+        "no_history": 1000
+      }
+    },
+    "2": {
+      "recall@20": 0.194,
+      "recall@50": 0.272,
+      "recall@100": 0.336,
+      "recall@200": 0.389,
+      "recall@500": 0.492,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_item2vec_vocab_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "3": {
+      "recall@20": 0.158,
+      "recall@50": 0.247,
+      "recall@100": 0.317,
+      "recall@200": 0.384,
+      "recall@500": 0.482,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_item2vec_vocab_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "4": {
+      "recall@20": 0.147,
+      "recall@50": 0.225,
+      "recall@100": 0.293,
+      "recall@200": 0.366,
+      "recall@500": 0.49,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_item2vec_vocab_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "5": {
+      "recall@20": 0.129,
+      "recall@50": 0.215,
+      "recall@100": 0.277,
+      "recall@200": 0.346,
+      "recall@500": 0.459,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_item2vec_vocab_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "6": {
+      "recall@20": 0.133,
+      "recall@50": 0.206,
+      "recall@100": 0.269,
+      "recall@200": 0.332,
+      "recall@500": 0.444,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_item2vec_vocab_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "7": {
+      "recall@20": 0.127,
+      "recall@50": 0.2,
+      "recall@100": 0.274,
+      "recall@200": 0.345,
+      "recall@500": 0.452,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_item2vec_vocab_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "8": {
+      "recall@20": 0.111,
+      "recall@50": 0.177,
+      "recall@100": 0.257,
+      "recall@200": 0.324,
+      "recall@500": 0.431,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_item2vec_vocab_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    }
+  },
+  "metadata": {
+    "tid": "exp005_metadata_item2vec_history_top500",
+    "eval_dataset": "devset",
+    "dataset_name": "talkpl-ai/TalkPlayData-Challenge-Dataset",
+    "train_split": "train",
+    "train_arrow_path": "C:\\Users\\ken05\\.cache\\huggingface\\datasets\\talkpl-ai___talk_play_data-challenge-dataset\\default\\0.0.0\\8110a2cfda8f7cfd43805a09eca6c58e0f7b285c\\talk_play_data-challenge-dataset-train.arrow",
+    "track_metadata_dataset_name": "talkpl-ai/TalkPlayData-Challenge-Track-Metadata",
+    "track_metadata_split": "all_tracks",
+    "track_metadata_arrow_path": "C:\\Users\\ken05\\.cache\\huggingface\\datasets\\talkpl-ai___talk_play_data-challenge-track-metadata\\default\\0.0.0\\91ddb944e1b0f5d13f18a2672214f69022c09d10\\talk_play_data-challenge-track-metadata-all_tracks.arrow",
+    "max_tags_per_track": 10,
+    "ground_truth_path": "exp/ground_truth/devset.json",
+    "model_path": "exp/models/exp005/metadata_item2vec.model",
+    "model": "metadata_augmented_word2vec_skipgram",
+    "metadata_relations": [
+      "artist_id",
+      "album_id",
+      "tag_list"
+    ],
+    "user_vector": "mean_of_prior_turn_item_vectors",
+    "retrieval_metric": "cosine_similarity",
+    "exclude_history_items": true,
+    "empty_history_strategy": "empty_predictions",
+    "top_k": 500,
+    "k_values": [
+      20,
+      50,
+      100,
+      200,
+      500
+    ],
+    "vector_size": 128,
+    "window": 7,
+    "min_count": 1,
+    "negative": 10,
+    "epochs": 20,
+    "batch_size": 64,
+    "workers": 1,
+    "seed": 42,
+    "training_session_count": 15199,
+    "training_interaction_count": 121592,
+    "training_unique_track_count": 43597,
+    "total_training_sequence_count": 517195,
+    "metadata_track_count": 47071,
+    "metadata_sequence_count": 501996,
+    "metadata_artist_relation_count": 58544,
+    "metadata_album_relation_count": 77933,
+    "metadata_tag_relation_count": 365519,
+    "candidate_track_count": 47071,
+    "item2vec_vocab_size": 104840,
+    "eval_turn_count": 8000,
+    "eval_session_count": 1000,
+    "eval_user_count": 500,
+    "target_in_item2vec_vocab_count": 8000,
+    "target_in_item2vec_vocab_rate": 1.0,
+    "retrieval_status_counts": {
+      "no_history": 1000,
+      "ok": 7000
+    }
+  }
+}

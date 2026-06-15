@@ -251,8 +251,9 @@ def retrieve_topk_by_user(
     max_k: int,
     batch_size: int,
     user_status: dict[str, str],
-) -> dict[str, list[str]]:
+) -> tuple[dict[str, list[str]], dict[str, list[float]]]:
     topk_by_user: dict[str, list[str]] = {}
+    topk_scores_by_user: dict[str, list[float]] = {}
     usable_indices = [
         idx
         for idx, user_id in enumerate(user_ids)
@@ -260,38 +261,45 @@ def retrieve_topk_by_user(
     ]
 
     if not usable_indices:
-        return {user_id: [] for user_id in user_ids}
+        empty_results = {user_id: [] for user_id in user_ids}
+        return empty_results, empty_results.copy()
 
     for start in tqdm(range(0, len(usable_indices), batch_size), desc="Retrieving"):
         batch_indices = usable_indices[start : start + batch_size]
         batch = query_matrix[batch_indices]
         scores = batch @ track_matrix.T
         indices = topk_indices(scores, max_k)
+        topk_scores = np.take_along_axis(scores, indices, axis=1)
 
         for row_position, user_index in enumerate(batch_indices):
             user_id = user_ids[user_index]
             topk_by_user[user_id] = track_ids[indices[row_position]].tolist()
+            topk_scores_by_user[user_id] = topk_scores[row_position].tolist()
 
     for user_id in user_ids:
         topk_by_user.setdefault(user_id, [])
+        topk_scores_by_user.setdefault(user_id, [])
 
-    return topk_by_user
+    return topk_by_user, topk_scores_by_user
 
 
 def build_retrieval_entries(
     records: list[dict[str, Any]],
     topk_by_user: dict[str, list[str]],
+    topk_scores_by_user: dict[str, list[float]],
     max_k: int,
 ) -> list[dict[str, Any]]:
     entries = []
     for record in records:
+        user_id = record["user_id"]
         entries.append(
             {
                 "session_id": record["session_id"],
-                "user_id": record["user_id"],
+                "user_id": user_id,
                 "turn_number": int(record["turn_number"]),
-                "predicted_track_ids": topk_by_user.get(record["user_id"], [])[:max_k],
-                "predicted_response": "",
+                "predicted_track_ids": topk_by_user.get(user_id, [])[:max_k],
+                "predicted_track_scores": topk_scores_by_user.get(user_id, [])[:max_k],
+                "predicted_response": "cf-bpr cosine retrieval",
             }
         )
     return entries
@@ -439,7 +447,7 @@ def main() -> None:
     status_counts = pd.Series(user_status).value_counts().to_dict()
     print(f"User retrieval status: {status_counts}")
 
-    topk_by_user = retrieve_topk_by_user(
+    topk_by_user, topk_scores_by_user = retrieve_topk_by_user(
         user_ids,
         query_matrix,
         track_ids,
@@ -495,10 +503,15 @@ def main() -> None:
 
     retrieval_path = Path(args.retrieval_dir) / args.eval_dataset / f"{args.tid}.json"
     if not args.no_save_retrieval:
-        retrieval_entries = build_retrieval_entries(records, topk_by_user, args.top_k)
+        retrieval_entries = build_retrieval_entries(
+            records,
+            topk_by_user,
+            topk_scores_by_user,
+            args.top_k,
+        )
         retrieval_path.parent.mkdir(parents=True, exist_ok=True)
         with retrieval_path.open("w", encoding="utf-8") as f:
-            json.dump(retrieval_entries, f, ensure_ascii=False)
+            json.dump(retrieval_entries, f, ensure_ascii=False, indent=2)
 
     score_path = Path(args.score_dir) / args.eval_dataset / f"{args.tid}_recall.json"
     score_path.parent.mkdir(parents=True, exist_ok=True)

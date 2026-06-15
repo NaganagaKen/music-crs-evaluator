@@ -1,0 +1,112 @@
+{
+  "recall@20": 0.018375,
+  "recall@50": 0.040625,
+  "recall@100": 0.064375,
+  "recall@200": 0.09674999999999999,
+  "recall@500": 0.16087500000000002,
+  "micro": {
+    "recall@20": 0.018375,
+    "recall@50": 0.040625,
+    "recall@100": 0.064375,
+    "recall@200": 0.09675,
+    "recall@500": 0.160875
+  },
+  "turn_wise": {
+    "1": {
+      "recall@20": 0.02,
+      "recall@50": 0.044,
+      "recall@100": 0.069,
+      "recall@200": 0.118,
+      "recall@500": 0.199
+    },
+    "2": {
+      "recall@20": 0.016,
+      "recall@50": 0.044,
+      "recall@100": 0.07,
+      "recall@200": 0.109,
+      "recall@500": 0.166
+    },
+    "3": {
+      "recall@20": 0.022,
+      "recall@50": 0.048,
+      "recall@100": 0.072,
+      "recall@200": 0.101,
+      "recall@500": 0.169
+    },
+    "4": {
+      "recall@20": 0.02,
+      "recall@50": 0.038,
+      "recall@100": 0.057,
+      "recall@200": 0.084,
+      "recall@500": 0.155
+    },
+    "5": {
+      "recall@20": 0.017,
+      "recall@50": 0.036,
+      "recall@100": 0.063,
+      "recall@200": 0.092,
+      "recall@500": 0.164
+    },
+    "6": {
+      "recall@20": 0.012,
+      "recall@50": 0.036,
+      "recall@100": 0.058,
+      "recall@200": 0.088,
+      "recall@500": 0.141
+    },
+    "7": {
+      "recall@20": 0.022,
+      "recall@50": 0.04,
+      "recall@100": 0.065,
+      "recall@200": 0.092,
+      "recall@500": 0.146
+    },
+    "8": {
+      "recall@20": 0.018,
+      "recall@50": 0.039,
+      "recall@100": 0.061,
+      "recall@200": 0.09,
+      "recall@500": 0.147
+    }
+  },
+  "metadata": {
+    "tid": "exp003_cf_bpr_l1_top500",
+    "eval_dataset": "devset",
+    "eval_dataset_name": "talkpl-ai/TalkPlayData-Challenge-Dataset",
+    "eval_split": "test",
+    "track_embedding_dataset_name": "talkpl-ai/TalkPlayData-Challenge-Track-Embeddings",
+    "track_split": "all_tracks",
+    "user_embedding_dataset_name": "talkpl-ai/TalkPlayData-Challenge-User-Embeddings",
+    "user_splits": [
+      "train",
+      "test_warm",
+      "test_cold"
+    ],
+    "embedding_column": "cf-bpr",
+    "retrieval_metric": "l1_distance",
+    "embedding_normalization": "raw",
+    "top_k": 500,
+    "k_values": [
+      20,
+      50,
+      100,
+      200,
+      500
+    ],
+    "batch_size": 16,
+    "track_chunk_size": 4096,
+    "track_count": 46455,
+    "eval_turn_count": 8000,
+    "eval_user_count": 500,
+    "unique_ground_truth_track_count": 6761,
+    "covered_unique_ground_truth_track_count": 6637,
+    "covered_eval_turn_count": 7870,
+    "non_empty_user_embedding_count": 8616,
+    "invalid_user_embedding_count": 104,
+    "eval_user_status_counts": {
+      "ok": 396,
+      "fallback_mean_user": 104
+    },
+    "missing_user_strategy": "mean_user"
+  }
+}
