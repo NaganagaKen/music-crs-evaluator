@@ -1,0 +1,171 @@
+{
+  "recall@20": 0.123625,
+  "recall@50": 0.18474999999999997,
+  "recall@100": 0.231375,
+  "recall@200": 0.28787500000000005,
+  "recall@500": 0.37462500000000004,
+  "micro": {
+    "recall@20": 0.123625,
+    "recall@50": 0.18475,
+    "recall@100": 0.231375,
+    "recall@200": 0.287875,
+    "recall@500": 0.374625
+  },
+  "turn_wise": {
+    "1": {
+      "recall@20": 0.0,
+      "recall@50": 0.0,
+      "recall@100": 0.0,
+      "recall@200": 0.0,
+      "recall@500": 0.0,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 0,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "no_history": 1000
+      }
+    },
+    "2": {
+      "recall@20": 0.158,
+      "recall@50": 0.243,
+      "recall@100": 0.285,
+      "recall@200": 0.344,
+      "recall@500": 0.426,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "3": {
+      "recall@20": 0.145,
+      "recall@50": 0.218,
+      "recall@100": 0.283,
+      "recall@200": 0.356,
+      "recall@500": 0.454,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "4": {
+      "recall@20": 0.156,
+      "recall@50": 0.209,
+      "recall@100": 0.266,
+      "recall@200": 0.33,
+      "recall@500": 0.432,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "5": {
+      "recall@20": 0.144,
+      "recall@50": 0.21,
+      "recall@100": 0.265,
+      "recall@200": 0.327,
+      "recall@500": 0.414,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "6": {
+      "recall@20": 0.138,
+      "recall@50": 0.214,
+      "recall@100": 0.271,
+      "recall@200": 0.344,
+      "recall@500": 0.442,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "7": {
+      "recall@20": 0.121,
+      "recall@50": 0.188,
+      "recall@100": 0.236,
+      "recall@200": 0.301,
+      "recall@500": 0.419,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    },
+    "8": {
+      "recall@20": 0.127,
+      "recall@50": 0.196,
+      "recall@100": 0.245,
+      "recall@200": 0.301,
+      "recall@500": 0.41,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_catalog_count": 1000,
+      "retrieval_status_counts": {
+        "ok": 1000
+      }
+    }
+  },
+  "metadata": {
+    "tid": "exp008_metadata_svd_history_top500",
+    "eval_dataset": "devset",
+    "track_metadata_dataset_name": "talkpl-ai/TalkPlayData-Challenge-Track-Metadata",
+    "track_metadata_split": "all_tracks",
+    "track_metadata_arrow_path": null,
+    "ground_truth_path": "exp/ground_truth/devset.json",
+    "model_path": "exp/models/exp007/metadata_svd.pkl",
+    "model": "count_vectorizer_truncated_svd",
+    "metadata_fields": [
+      "track_name",
+      "artist_name",
+      "album_name",
+      "tag_list",
+      "release_date"
+    ],
+    "user_vector": "mean_of_prior_turn_item_svd_vectors",
+    "retrieval_metric": "cosine_similarity",
+    "exclude_history_items": true,
+    "empty_history_strategy": "empty_predictions",
+    "top_k": 500,
+    "k_values": [
+      20,
+      50,
+      100,
+      200,
+      500
+    ],
+    "n_components": 256,
+    "max_features": 50000,
+    "min_df": 2,
+    "max_df": 0.95,
+    "svd_algorithm": "randomized",
+    "svd_n_iter": 7,
+    "svd_tol": 0.0,
+    "retrieval_batch_size": 64,
+    "seed": 42,
+    "candidate_track_count": 47071,
+    "vocabulary_size": 43104,
+    "empty_item_document_count": 0,
+    "explained_variance_ratio_sum": 0.5282124765517369,
+    "eval_turn_count": 8000,
+    "eval_session_count": 1000,
+    "eval_user_count": 500,
+    "target_in_catalog_count": 8000,
+    "target_in_catalog_rate": 1.0,
+    "retrieval_status_counts": {
+      "no_history": 1000,
+      "ok": 7000
+    }
+  }
+}
