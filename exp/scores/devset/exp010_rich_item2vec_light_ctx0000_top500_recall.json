@@ -1,0 +1,250 @@
+{
+  "recall@20": 0.1655,
+  "recall@50": 0.24625,
+  "recall@100": 0.310625,
+  "recall@200": 0.384625,
+  "recall@500": 0.48525,
+  "micro": {
+    "recall@20": 0.1655,
+    "recall@50": 0.24625,
+    "recall@100": 0.310625,
+    "recall@200": 0.384625,
+    "recall@500": 0.48525
+  },
+  "turn_wise": {
+    "1": {
+      "recall@20": 0.0,
+      "recall@50": 0.0,
+      "recall@100": 0.0,
+      "recall@200": 0.0,
+      "recall@500": 0.0,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 0,
+      "target_in_item2vec_vocab_count": 1000,
+      "retrieval_status_counts": {
+        "all_context_oov": 1000
+      },
+      "mean_context_token_count": 62.171,
+      "mean_in_vocab_context_count": 58.911
+    },
+    "2": {
+      "recall@20": 0.221,
+      "recall@50": 0.3,
+      "recall@100": 0.357,
+      "recall@200": 0.435,
+      "recall@500": 0.536,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_item2vec_vocab_count": 1000,
+      "retrieval_status_counts": {
+        "history_and_context": 1000
+      },
+      "mean_context_token_count": 81.896,
+      "mean_in_vocab_context_count": 78.48
+    },
+    "3": {
+      "recall@20": 0.188,
+      "recall@50": 0.293,
+      "recall@100": 0.366,
+      "recall@200": 0.447,
+      "recall@500": 0.545,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_item2vec_vocab_count": 1000,
+      "retrieval_status_counts": {
+        "history_and_context": 1000
+      },
+      "mean_context_token_count": 100.291,
+      "mean_in_vocab_context_count": 96.622
+    },
+    "4": {
+      "recall@20": 0.188,
+      "recall@50": 0.274,
+      "recall@100": 0.354,
+      "recall@200": 0.421,
+      "recall@500": 0.545,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_item2vec_vocab_count": 1000,
+      "retrieval_status_counts": {
+        "history_and_context": 1000
+      },
+      "mean_context_token_count": 117.268,
+      "mean_in_vocab_context_count": 113.308
+    },
+    "5": {
+      "recall@20": 0.191,
+      "recall@50": 0.285,
+      "recall@100": 0.352,
+      "recall@200": 0.442,
+      "recall@500": 0.559,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_item2vec_vocab_count": 1000,
+      "retrieval_status_counts": {
+        "history_and_context": 1000
+      },
+      "mean_context_token_count": 133.21,
+      "mean_in_vocab_context_count": 128.925
+    },
+    "6": {
+      "recall@20": 0.187,
+      "recall@50": 0.29,
+      "recall@100": 0.368,
+      "recall@200": 0.461,
+      "recall@500": 0.584,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_item2vec_vocab_count": 1000,
+      "retrieval_status_counts": {
+        "history_and_context": 1000
+      },
+      "mean_context_token_count": 148.213,
+      "mean_in_vocab_context_count": 143.568
+    },
+    "7": {
+      "recall@20": 0.172,
+      "recall@50": 0.27,
+      "recall@100": 0.342,
+      "recall@200": 0.438,
+      "recall@500": 0.545,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_item2vec_vocab_count": 1000,
+      "retrieval_status_counts": {
+        "history_and_context": 1000
+      },
+      "mean_context_token_count": 162.298,
+      "mean_in_vocab_context_count": 157.289
+    },
+    "8": {
+      "recall@20": 0.177,
+      "recall@50": 0.258,
+      "recall@100": 0.346,
+      "recall@200": 0.433,
+      "recall@500": 0.568,
+      "turn_count": 1000,
+      "non_empty_prediction_count": 1000,
+      "target_in_item2vec_vocab_count": 1000,
+      "retrieval_status_counts": {
+        "history_and_context": 1000
+      },
+      "mean_context_token_count": 175.788,
+      "mean_in_vocab_context_count": 170.38
+    }
+  },
+  "metadata": {
+    "tid": "exp010_rich_item2vec_light_ctx0000_top500",
+    "eval_dataset": "devset",
+    "dataset_name": "talkpl-ai/TalkPlayData-Challenge-Dataset",
+    "train_split": "train",
+    "train_arrow_path": null,
+    "eval_split": "test",
+    "eval_arrow_path": null,
+    "track_metadata_dataset_name": "talkpl-ai/TalkPlayData-Challenge-Track-Metadata",
+    "track_metadata_split": "all_tracks",
+    "track_metadata_arrow_path": null,
+    "max_tags_per_track": 10,
+    "max_name_tokens_per_field": 8,
+    "max_user_text_tokens": 12,
+    "max_goal_tokens": 16,
+    "popularity_bin_size": 10,
+    "duration_bin_seconds": 30,
+    "include_user_id_token": true,
+    "ground_truth_path": "exp/ground_truth/devset.json",
+    "model_path": "exp/models/exp010/rich_item2vec_light.model",
+    "model": "rich_context_word2vec_skipgram",
+    "metadata_relations": [
+      "artist_id",
+      "album_id",
+      "tag_list",
+      "track_name",
+      "artist_name",
+      "album_name",
+      "release_year",
+      "release_decade",
+      "popularity_bin",
+      "duration_bin",
+      "isrc_country",
+      "isrc_prefix"
+    ],
+    "training_context_relations": [
+      "user_text",
+      "profile",
+      "conversation_goal",
+      "session_date",
+      "user_id"
+    ],
+    "user_vector": "weighted_mean_of_prior_turn_item_vectors_and_context_tokens",
+    "history_weight": 1.0,
+    "context_weight": 0.0,
+    "retrieval_metric": "cosine_similarity",
+    "exclude_history_items": true,
+    "empty_history_strategy": "use_context_tokens_when_available",
+    "top_k": 500,
+    "k_values": [
+      20,
+      50,
+      100,
+      200,
+      500
+    ],
+    "vector_size": 128,
+    "window": 7,
+    "min_count": 2,
+    "negative": 10,
+    "epochs": 5,
+    "batch_size": 64,
+    "workers": 4,
+    "seed": 42,
+    "training_session_count": 15199,
+    "training_interaction_count": 121592,
+    "training_context_sequence_count": 14507688,
+    "training_context_profile_age_group_relation_count": 121592,
+    "training_context_profile_country_code_relation_count": 121592,
+    "training_context_profile_country_name_relation_count": 121592,
+    "training_context_profile_gender_relation_count": 121592,
+    "training_context_profile_preferred_language_relation_count": 121592,
+    "training_context_profile_preferred_musical_culture_relation_count": 121592,
+    "training_context_profile_user_split_relation_count": 121592,
+    "training_context_user_relation_count": 121592,
+    "training_context_profile_text_relation_count": 319888,
+    "training_context_text_relation_count": 6237443,
+    "training_context_goal_category_relation_count": 121592,
+    "training_context_goal_specificity_relation_count": 121592,
+    "training_context_goal_text_relation_count": 1701256,
+    "training_context_session_year_relation_count": 121592,
+    "training_context_session_decade_relation_count": 121592,
+    "training_context_user_text_relation_count": 4789997,
+    "training_unique_track_count": 43597,
+    "total_training_sequence_count": 16696032,
+    "metadata_track_count": 47071,
+    "metadata_sequence_count": 2173145,
+    "metadata_artist_id_relation_count": 58544,
+    "metadata_album_id_relation_count": 77933,
+    "metadata_tag_relation_count": 365115,
+    "metadata_text_relation_count": 918414,
+    "metadata_track_name_phrase_relation_count": 45016,
+    "metadata_track_name_relation_count": 113437,
+    "metadata_artist_name_phrase_relation_count": 46493,
+    "metadata_artist_name_relation_count": 90645,
+    "metadata_album_name_phrase_relation_count": 42055,
+    "metadata_album_name_relation_count": 137721,
+    "metadata_release_relation_count": 92818,
+    "metadata_popularity_relation_count": 47071,
+    "metadata_duration_relation_count": 46409,
+    "metadata_isrc_relation_count": 91474,
+    "candidate_track_count": 47071,
+    "item2vec_vocab_size": 183440,
+    "eval_context_key_count": 8000,
+    "eval_turn_count": 8000,
+    "eval_session_count": 1000,
+    "eval_user_count": 500,
+    "target_in_item2vec_vocab_count": 8000,
+    "target_in_item2vec_vocab_rate": 1.0,
+    "retrieval_status_counts": {
+      "all_context_oov": 1000,
+      "history_and_context": 7000
+    }
+  }
+}
